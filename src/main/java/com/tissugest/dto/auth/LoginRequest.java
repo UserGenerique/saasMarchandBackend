@@ -1,0 +1,14 @@
+package com.tissugest.dto.auth;
+
+import jakarta.validation.constraints.NotBlank;
+import lombok.Data;
+
+@Data
+public class LoginRequest {
+
+    @NotBlank(message = "Le numéro de téléphone est obligatoire")
+    private String phone;
+
+    @NotBlank(message = "Le mot de passe est obligatoire")
+    private String password;
+}
